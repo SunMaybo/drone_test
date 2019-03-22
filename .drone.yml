@@ -10,6 +10,4 @@ steps:
            from_secret: docker_username
         password:
            from_secret: docker_password
-     	tags: ${DRONE_TAG=latest}
-     	when:
-          event: [push, tag, deployment]
+     	auto_tag: true
