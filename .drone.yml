@@ -3,10 +3,9 @@ name: default
 clone:
   depth: 50
 steps:
-  -  name: publish
-     image: plugins/docker
-     restore: true
-     settings:
+  - name: publish
+    image: plugins/docker
+    settings:
      	repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
      	username:
            from_secret: docker_username
