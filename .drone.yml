@@ -1,9 +1,11 @@
 pipeline:
-  build:
-    image: golang:1.9
-    commands:
-      - pwd
-      - go env
-      - go version
-      - ls -al
+   publish:
+      image: plugins/docker
+      registry: registry.cn-hangzhou.aliyuncs.com
+      repo: /ybase/test
+      # mirror: https://docker.mirrors.ustc.edu.cn
+      # 需要使用drone cli添加secrets: http://docs.drone.io/manage-secrets/
+      secrets: [ test_username, test_pwd ]
+      tags:
+        - latest
 
