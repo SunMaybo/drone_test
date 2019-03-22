@@ -1,11 +1,13 @@
-pipeline:
-  publish:
+kind: pipeline
+name: default
+steps:
+  -  name: publish
      image: plugins/docker
      restore: true
-     registry: registry.cn-hangzhou.aliyuncs.com
-     repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
-     secrets: [docker_username,docker_password]
-     tags: ${DRONE_TAG=latest}
-     when:
-        event: [push, tag, deployment]
-    	environment: production
+     settings:
+     	registry: registry.cn-hangzhou.aliyuncs.com
+     	repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
+     	secrets: [docker_username,docker_password]
+     	tags: ${DRONE_TAG=latest}
+     	when:
+          event: [push, tag, deployment]
