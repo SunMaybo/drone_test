@@ -2,6 +2,6 @@ pipeline:
   publish:
      image: plugins/docker
      registry: registry.cn-hangzhou.aliyuncs.com
-     repo: registry.cn-hangzhou.aliyuncs.com/base/test
+     repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
      secrets: [docker_username,docker_password]
      tags: latest
