@@ -2,7 +2,7 @@ pipeline:
    publish:
       image: plugins/docker
       registry: registry.cn-hangzhou.aliyuncs.com
-      repo: ybase/test
+      repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
       # mirror: https://docker.mirrors.ustc.edu.cn
       # 需要使用drone cli添加secrets: http://docs.drone.io/manage-secrets/
       secrets: [ test_username, test_pwd ]
