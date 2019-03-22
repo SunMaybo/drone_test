@@ -6,10 +6,10 @@ steps:
   - name: publish
     image: plugins/docker
     settings:
-     	repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
-        registry: registry.cn-hangzhou.aliyuncs.com
-     	username:
-           from_secret: docker_username
-        password:
-           from_secret: docker_password
-     	auto_tag: true
+     repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
+     registry: registry.cn-hangzhou.aliyuncs.com
+     username:
+       from_secret: docker_username
+     password:
+       from_secret: docker_password
+     auto_tag: true
