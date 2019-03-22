@@ -1,6 +1,7 @@
 pipeline:
   publish:
      image: plugins/docker
+     detach: true
      registry: registry.cn-hangzhou.aliyuncs.com
      repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
      secrets: [docker_username,docker_password]
