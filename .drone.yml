@@ -8,3 +8,5 @@ pipeline:
      tags: ${DRONE_TAG=latest}
      when:
         event: [push, tag, deployment]
+    	target:
+    	- production
