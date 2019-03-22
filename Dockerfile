@@ -1,4 +1,4 @@
-FROM python:latest
+FROM registry.cn-hangzhou.aliyuncs.com/ybase/python:latest
 RUN mkdir -p /db/tencent
 RUN chmod -R 777 /db/tencent
 ADD apiutil.py /apiutil.py
