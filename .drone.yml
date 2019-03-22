@@ -1,12 +1,7 @@
-kind: pipeline
-name: test
-steps:
-- name: push
-  image: plugins/docker
-  settings:
-    repo: registry.cn-hangzhou.aliyuncs.com/ybase/test
-    tags: latest
-    username:
-      from_secret: username
-    password:
-      from_secret: pwd
+pipeline
+  publish:
+     image: plugins/docker
+     registry: registry.cn-hangzhou.aliyuncs.com
+     repo: ybase/test
+     secrets: [docker_username,docker_password]
+     tags: latest
