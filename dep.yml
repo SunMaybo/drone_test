@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: test
+  name: test1
 spec:
   selector:
     matchLabels:
-      app: test
+      app: test1
   replicas: 1
   template:
     metadata:
       labels:
-        app: test
+        app: test1
     spec:
       containers:
          - name: test
