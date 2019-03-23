@@ -20,11 +20,7 @@ steps:
        - tag
        - pull_request
   - name: deploy
-    image: registry.cn-hangzhou.aliyuncs.com/ybase/drone-kube
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
+    image: pterosaurs/drone-kube
     settings:
       template: dep.yml
       server: https://192.168.1.63:6443
