@@ -25,5 +25,8 @@ steps:
     commands:
     - echo ${DRONE_TAG}
     when:
+     ref:
+      include:
+      - refs/tags/*.rc.1
       status:
       - success
