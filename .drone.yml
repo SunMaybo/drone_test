@@ -20,7 +20,7 @@ steps:
        - tag
        - pull_request
   - name: deploy
-    image: vallard/drone-kube
+    image: registry.cn-hangzhou.aliyuncs.com/ybase/drone-kube
     settings:
       template: dep.yml
       server: https://192.168.1.63:6443
