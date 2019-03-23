@@ -7,14 +7,12 @@ steps:
     image: plugins/docker
     restore: true
     settings:
-     repo: registry.cn-hangzhou.aliyuncs.com/ybase/${DRONE_REPO_NAME}
+     repo: registry.cn-hangzhou.aliyuncs.com/ybase/${DRONE_REPO_NAME}:${DRONE_TAG}
      registry: registry.cn-hangzhou.aliyuncs.com
      username:
        from_secret: docker_username
      password:
        from_secret: docker_password
-     auto_tag: true
-     launch_debug: true
     trigger:
        event:
        - push
