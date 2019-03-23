@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
          - name: test
-           image: {{repo.name}}
+           image: registry.cn-hangzhou.aliyuncs.com/ybase/{{repo.name}}:{{build.tag}}
            ports:
            - containerPort: 8080
       imagePullPolicy: Always
