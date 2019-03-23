@@ -25,6 +25,7 @@ steps:
     settings:
       template: dep.yml
       server: https://192.168.1.63:6443
+      namespace: kawkeye
       ca:
         from_secret: k8s_ca
       token:
