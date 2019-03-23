@@ -24,5 +24,6 @@ steps:
     image: golang
     commands:
     - echo ${DRONE_TAG}
-    status:
-    - success
+    when:
+      status:
+      - success
