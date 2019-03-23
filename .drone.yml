@@ -21,9 +21,13 @@ steps:
        - tag
        - pull_request
   - name: deploy
-    image: golang
-    commands:
-    - echo ${DRONE_TAG}
+    image: vallard/drone-kube
+    template: dep.yml
+    server: https://192.168.1.63:6443
+    ca:
+     from_secret: k8s_ca
+    token:
+     from_secret: k8s_token
     when:
      ref:
       include:
