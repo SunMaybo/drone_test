@@ -10,6 +10,8 @@ steps:
      repo: registry.cn-hangzhou.aliyuncs.com/ybase/${DRONE_REPO_NAME}
      registry: registry.cn-hangzhou.aliyuncs.com
      tags: ${DRONE_TAG:latest}
+     build_args:
+     - HTTP_PROXY=http://47.244.153.12:3128
      username:
        from_secret: docker_username
      password:
