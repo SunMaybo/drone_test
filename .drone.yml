@@ -9,7 +9,7 @@ steps:
     settings:
      repo: registry.cn-hangzhou.aliyuncs.com/ybase/${DRONE_REPO_NAME}
      registry: registry.cn-hangzhou.aliyuncs.com
-     tags: {$DRONE_TAG}
+     tags: ${DRONE_TAG:latest}
      username:
        from_secret: docker_username
      password:
