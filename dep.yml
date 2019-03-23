@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: test1
-  namespace: kawkeye
+  namespace: signer
 spec:
   selector:
     matchLabels:
