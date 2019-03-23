@@ -1,5 +1,5 @@
 kind: pipeline
-name: ${repo.name}
+name: ${DRONE_REPO_NAME}
 clone:
   depth: 50
 steps:
@@ -7,7 +7,7 @@ steps:
     image: plugins/docker
     restore: true
     settings:
-     repo: registry.cn-hangzhou.aliyuncs.com/ybase/${repo.name}
+     repo: registry.cn-hangzhou.aliyuncs.com/ybase/${DRONE_REPO_NAME}
      registry: registry.cn-hangzhou.aliyuncs.com
      username:
        from_secret: docker_username
