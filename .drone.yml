@@ -15,7 +15,7 @@ steps:
        from_secret: docker_password
      auto_tag: true
      launch_debug: true
-     trigger:
+    trigger:
        event:
        - push
        - tag
