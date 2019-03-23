@@ -20,3 +20,9 @@ steps:
        - push
        - tag
        - pull_request
+  - name: deploy
+    image: golang
+    commands:
+    - echo ${DRONE_TAG}
+    status:
+    - success
